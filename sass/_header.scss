@@ -1,0 +1,22 @@
+.header {
+  background-color: $color-secondary;
+
+  grid-column: full-start / full-end;
+
+  grid-row: 2/3;
+
+  display: flex;
+  padding: 2rem 0 2rem 0;
+
+  &__about {
+    grid-column: full-start / full-end;
+
+    grid-row: 2/3;
+    text-align: center;
+    background-image: url(../img/image1.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 7rem;
+    color: $color-grey-light-1;
+  }
+}

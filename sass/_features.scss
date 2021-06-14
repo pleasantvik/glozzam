@@ -1,0 +1,292 @@
+.features {
+  grid-column: center-start / center-end;
+
+  // background-color: $color-secondary;
+
+  margin: 15rem 0;
+  display: grid;
+  grid-gap: 6rem;
+
+  // grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+  &__about {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+    // margin: 15rem 0;
+  }
+
+  &__services {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    margin-top: 5rem;
+  }
+
+  &__blog {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+    margin: 5rem 0;
+  }
+  &__contact {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+    margin: 5rem 0;
+  }
+
+  &__faq {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    justify-items: center;
+    margin-top: 10rem;
+
+    // grid-gap: 6rem;
+    // grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    // grid-template-rows: 1fr 1fr;
+
+    // margin-top: 5rem;
+  }
+  &__staff {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    justify-items: center;
+    margin-top: 10rem;
+  }
+}
+
+.feature {
+  text-align: center;
+  padding: 1.2rem;
+
+  &__faq {
+    grid-row: 1/ 2;
+    text-align: center;
+  }
+
+  &__icon {
+    fill: $color-primary;
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+
+  &__about--img {
+    width: 50rem;
+    height: 50rem;
+
+    border-radius: 50%;
+
+    margin-top: -3rem;
+
+    @media only screen and (max-width: $bp-lg) {
+      display: none;
+    }
+  }
+}
+.service {
+  text-align: center;
+  padding: 1.2rem;
+
+  border: 3px solid $color-grey-light-1;
+
+  .p-1 {
+    font-size: 1.5rem;
+    &:not(:last-child) {
+      padding: 1.5rem;
+      background-color: $color-grey-light-1;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__icon {
+    fill: $color-primary;
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+
+  &__about--img {
+    width: 50rem;
+    height: 50rem;
+
+    border-radius: 50%;
+
+    margin-top: -3rem;
+  }
+}
+
+.about {
+  // grid-column: full-start / full-end;
+
+  margin: 5rem 0;
+  grid-column: center-start / center-end;
+
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  justify-items: center;
+  margin-top: 10rem;
+
+  &__first {
+    background-color: $color-secondary;
+    text-align: center;
+    padding: 4rem 3rem;
+  }
+
+  &__content {
+    margin-top: 3rem;
+
+    display: grid;
+
+    grid-gap: 6rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    // justify-items: center;
+
+    @media only screen and (max-width: $bp-lg) {
+    }
+  }
+
+  &__text {
+    // width: 50%;
+  }
+
+  &__img-box {
+    // width: 50%;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.faq__container {
+  // align-self: flex-start;
+
+  display: grid;
+  grid-gap: 6rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  // grid-template-rows: 1fr 1fr;
+
+  // margin-top: 5rem;
+}
+
+.faq {
+  border: 2px solid $color-grey-light-1;
+  border-radius: 1rem;
+  padding: 3rem;
+  position: relative;
+  transition: all 0.3s ease;
+
+  &__header {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    background-color: $color-secondary;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__active {
+    background-color: $color-secondary;
+
+    display: block;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+
+    display: none;
+    padding: 2rem;
+
+    margin: 3rem 0 0;
+  }
+
+  &__head {
+    font-size: 3rem;
+    margin-right: 4rem;
+  }
+
+  &__active &__text {
+    background-color: #fff;
+
+    display: block;
+    color: $color-secondary;
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-primary;
+  }
+
+  &__toggle {
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+
+    border: none;
+
+    height: 4rem;
+
+    width: 4rem;
+
+    border-radius: 50%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__toggle &__close {
+    display: none;
+  }
+
+  &__active &__toggle &__close {
+    display: block;
+  }
+
+  &__active &__toggle &__open {
+    display: none;
+  }
+}
+
+.blog {
+  text-align: center;
+  padding: 1.2rem;
+  border: 3px solid $color-grey-light-1;
+
+  &__img {
+    border: 1px solid $color-primary;
+    margin-bottom: 2rem;
+  }
+}
+
+.staff {
+  grid-column: center-start / center-end;
+
+  margin: 15rem 0;
+  display: grid;
+  grid-gap: 6rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}

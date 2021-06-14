@@ -1,0 +1,137 @@
+.carousel {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0 auto;
+  // text-align: center;
+
+  &__image-container {
+    display: flex;
+
+    transform: translateX(0);
+
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__container {
+    display: flex;
+
+    transform: translateX(0);
+
+    // justify-content: center;
+
+    // align-items: center;
+
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__test-1 {
+    flex: 0 0 100%;
+  }
+
+  &__test-img {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+  }
+
+  &__img-box {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    flex: 0 0 100%;
+
+    // width: 100rem;
+
+    height: 50rem;
+
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      background-image: linear-gradient(
+        rgba($color-secondary, 0.3),
+        rgba($color-secondary, 0.3)
+      );
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    background-color: $color-grey-light-2;
+
+    border: none;
+    padding: 1.5rem;
+    cursor: pointer;
+    width: 23.5%;
+    color: #fff;
+    transition: all 0.5s;
+    font-size: 2rem;
+    margin: 2rem;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__text-position {
+    position: absolute;
+    bottom: 10rem;
+    left: 2rem;
+  }
+
+  &__heading-1 {
+    font-size: 6rem;
+    color: #f4f2f2;
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  &__p-1 {
+    color: #f4f2f2;
+    font-size: 2rem;
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  background-color: $color-primary;
+  border: none;
+  padding: 2.5rem;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.5s;
+  font-size: 2rem;
+  display: block;
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-full {
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+}
